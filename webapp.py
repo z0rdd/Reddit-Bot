@@ -1,6 +1,9 @@
 from flask import Flask
 import os
 
+
+
+running_on_heroku = False
 if os.environ.get("R_LOGIN") is not None:
     running_on_heroku = True
     
