@@ -1,15 +1,12 @@
 from flask import Flask
 import os
 
-
-
-running_on_heroku = False
-if os.environ.get("R_LOGIN") is not None:
+if "ISHEROKU" in os.environ:
     running_on_heroku = True
     
 app = Flask(__name__)
 
-if running_on_heroku:
+if runnon_on heroku:
         app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 else:
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:aaa@localhost/flaskapp'

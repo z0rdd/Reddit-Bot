@@ -9,7 +9,7 @@ class Bot:
     def __init__(self, keyword):
         self.keyword = keyword
         self.running_on_heroku = False
-        if os.environ.get("R_LOGIN") is not None:
+        if "ISHEROKU" in os.environ:
             self.running_on_heroku = True
         print(self.running_on_heroku)
         self.database = db.Database(self.running_on_heroku)
