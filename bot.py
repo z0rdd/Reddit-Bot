@@ -22,7 +22,7 @@ class Bot:
         if self.running_on_heroku:
             reddit = praw.Reddit(username=os.environ["R_USERNAME"],
                                  password=os.environ["R_PASSWORD"],
-                                 client_id=os.environ["R_CID"],
+                                 client_id=os.environ["R_C_ID"],
                                  client_secret=os.environ["R_SECRET"],
                                  user_agent="my test bot")
         else:
