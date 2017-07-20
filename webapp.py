@@ -6,7 +6,7 @@ if "ISHEROKU" in os.environ:
     
 app = Flask(__name__)
 
-if runnon_on heroku:
+if running_on_heroku:
         app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 else:
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:aaa@localhost/flaskapp'
