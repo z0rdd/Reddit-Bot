@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block content %}
+            <div class="jumbotron">
+                <table class="table table-striped">
+                    <thead>
+                        <th>Id</th>
+                        <th>CommentID</th>
+                        <th>Author</th>
+                        <th>Hit Count</th>
+                        <th>Date</th>
+
+                    </thead>
+                    {%- for stat in stats %}
+                        <tr>
+                        <td>{{ stat.id }}</td>
+                        <td>{{ stat.comment_id }}</td>
+                        <td>{{ stat.author }}</td>
+                        <td>{{ stat.hit_count }}</td>
+                        <td>{{ stat.date.strftime("%Y-%m-%d %H:%M:%S") }}</td>
+
+                        </tr>
+                    {%- endfor %}
+                </table>
+            </div>
+{% endblock %}
