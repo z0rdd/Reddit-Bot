@@ -1,6 +1,8 @@
 from flask import Flask
 import os
 
+running_on_heroku = False
+
 if "ISHEROKU" in os.environ:
     running_on_heroku = True
     

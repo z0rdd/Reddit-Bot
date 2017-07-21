@@ -45,10 +45,11 @@ class Bot:
                 if self.database.search_comment_id(comment.id) is not None:
                     pass
                 else:
-                    self.database.insert(comment.id, comment.author.name, 1)
+                    self.database.insert(comment.id, comment.author.name, comment.body.lower().count(self.keyword))
 
-        print(self.database.view_all())
+        # print(self.database.view_all())
         time.sleep(20)
+
 
 
 if __name__ == "__main__":
