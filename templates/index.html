@@ -1,12 +1,11 @@
 {% extends 'layout.html' %}
 {% block content %}
 
-                    <div class="jumbotron">
-                        OSfrog has been mentioned <strong>{{ count }}</strong> times since {{ first_hit }} in comments on r/dota2<br>
-
-                        <!-- OSfrog's name has been used the most by {{ top }} at xx times which is xx per comment.<br>
-
-                        The day OSfrog's name has been called upon the most has been xxx. -->
-                    </div>
+            <div class="jumbotron">
+                <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>OSFrog has been mentioned <strong>{{ count }}</strong> times since <strong>{{ first_hit }}</strong> in comments on r/dota2
+                <br>
+                <br>
+                <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>OSfrog's name has been used the most by <a href="{{url_for('individual', person=top.author) }}"><strong>{{ top.author}}</strong></a> @ <strong>{{ top.Total }}</strong> times.<br>
+            </div>
 
 {% endblock %}

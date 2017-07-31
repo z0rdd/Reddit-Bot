@@ -3,7 +3,6 @@
             <div class="jumbotron">
                 <table class="table table-striped">
                     <thead>
-                        <th>Id</th>
                         <th>Author</th>
                         <th>Hit Count</th>
                         <th>Date</th>
@@ -11,11 +10,9 @@
                     </thead>
                     {%- for stat in stats %}
                         <tr>
-                        <td>{{ stat.id }}</td>
-                            <td><a href="{{url_for('individual', person=stat.author) }}">{{ stat.author }}</a></td>
+                        <td>{{ stat.author }}</td>
                         <td>{{ stat.hit_count }}</td>
                         <td>{{ stat.date.strftime("%Y-%m-%d %H:%M:%S") }}</td>
-
                         </tr>
                     {%- endfor %}
                 </table>

@@ -40,7 +40,7 @@ class Bot:
         """ run the bot """
 
         print("Doing the thing!")
-        for comment in reddit.subreddit('dota2').comments(limit=100):
+        for comment in reddit.subreddit('dota2').comments(limit=300):
             if self.keyword in comment.body.lower():
                 if self.database.search_comment_id(comment.id) is not None:
                     pass

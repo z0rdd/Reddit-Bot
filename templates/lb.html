@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+            <div class="jumbotron">
+
+               <table class="table table-striped">
+                    <thead>
+                        <th>#</th>
+                        <th>Author</th>
+                        <th>Total</th>
+
+
+                    </thead>
+                    {%- for item in qry %}
+                        <tr>
+                        <td>{{ loop.index }}</td>
+                        <td><a href="{{url_for('individual', person=item.author) }}">{{ item.author }}</a></td>
+                        <td>{{ item.Total }}</td>
+                        </tr>
+                    {%- endfor %}
+                </table>
+            </div>
+
+{% endblock %}
