@@ -19,4 +19,4 @@ from views import *
 if __name__ == '__main__':
     app.debug = True
     print("running")
-    app.run(port=33507)
+    app.run()
