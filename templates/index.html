@@ -1,11 +1,25 @@
 {% extends 'layout.html' %}
 {% block content %}
 
+<h2><small>General Stats</small></h2>
+
             <div class="jumbotron">
+
+
                 <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>OSFrog has been mentioned <strong>{{ count }}</strong> times since <strong>{{ first_hit }}</strong> in comments on r/dota2
                 <br>
                 <br>
-                <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>OSfrog's name has been used the most by <a href="{{url_for('individual', person=top.author) }}"><strong>{{ top.author}}</strong></a> @ <strong>{{ top.Total }}</strong> times.<br>
+                <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>OSfrog's name has been called upon the most by <a href="{{url_for('individual', person=top.author) }}"><strong>{{ top.author}}</strong></a> @ <strong>{{ top.Total }}</strong> times.
+                <br>
+            </div>
+
+            <h2><small>Trends</small></h2>
+            <div class="jumbotron">
+
+                {{ div | safe }}
+                {{ script | safe }}
+
+
             </div>
 
 {% endblock %}

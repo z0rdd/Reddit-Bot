@@ -1,5 +1,21 @@
 {% extends 'layout.html' %}
 {% block content %}
+            <h2><small>General Stats</small></h2>
+           <div class="jumbotron">
+
+               <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span><strong>{{ person_total.author }}</strong> mentioned OSfrog a total number of <strong>{{person_total.Total}}</strong> times in <strong>{{ post_count}}</strong> posts.
+
+           </div>
+
+            <h2><small>Trends</small></h2>
+           <div class="jumbotron">
+
+                {{ div | safe }}
+                {{ script | safe }}
+
+            </div>
+
+            <h2><small>Raw User Data</small></h2>
             <div class="jumbotron">
                 <table class="table table-striped">
                     <thead>
